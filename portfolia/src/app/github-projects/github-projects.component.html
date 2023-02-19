@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <form class="form-inline">      
+        <div class="form-group">
+          <label for="year" class="mr-2">Buscar projeto por Ano:</label>
+          <div class="col-md-3">
+            <input type="text" class="form-control" id="year" [ngModelOptions]="{ standalone: true }" [(ngModel)]="anoPesquisado">
+          </div>          
+        </div>       
+      <br>
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-primary ml-2" (click)="buscarProjetosPorAno()">Buscar</button>
+        <button type="submit" class="btn btn-warning ml-2" (click)="buscarAllProjetos()">Todos</button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4" *ngFor="let projeto of projetos">
+    <a href="{{ projeto.html_url }}" target="_blank">
+      <img src="{{ projeto.owner.avatar_url }}" alt="{{ projeto.name }}" class="img-thumbnail">
+    </a>
+    
+    <div class="caption">
+      <h3>{{ projeto.name }}</h3>      
+    </div>
+  </div>
+</div>
+ 
+
+<br>
+<br>
+<br>
+<br>

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
+import { GithubProjectsComponent } from './github-projects/github-projects.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,12 +15,14 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    GithubProjectsComponent
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
  
   providers: [],
